@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -35,20 +36,20 @@
             <div id="erroCidade" class="erro"></div><br>
 
             <label for="Moradia">Moradia:</label>
-            <select id="Tipo de Moradia">
+            <select id="moradia">
                 <option value="">Selecione</option>
                 <option value="casa">Casa</option>
                 <option value="ap">Apartamento</option>
             </select><br><br>
 
             <label for="Quintal">Sua moradia tem quintal:</label>
-                <input type="checkbox" id="moradia" placeholder="Sim">Sim
-                <input type="checkbox" id="moradia" placeholder="Não">Não
+                <input type="checkbox" id="quintal" placeholder="Sim">Sim
+                <input type="checkbox" id="quintal" placeholder="Não">Não
             <div id="erroQuintal" class="erro"></div><br>
 
             <label for="Antes">Já teve pet antes?:</label>
-                <input type="checkbox" id="moradia" placeholder="Sim">Sim
-                <input type="checkbox" id="moradia" placeholder="Não">Não
+                <input type="checkbox" id="antes" placeholder="Sim">Sim
+                <input type="checkbox" id="antes" placeholder="Não">Não
             <div id="erroAntes" class="erro"></div><br>
 
             <label for="Horas">Quantas horas você consegue ficar com o seu pet?</label>
@@ -59,7 +60,7 @@
             <textarea id="motivo"></textarea><br><br>
 
             <label for="Termo">Aceito o termo de responsabilidade:</label>
-                <input type="checkbox" id="moradia">
+                <input type="checkbox" id="termo">
             <div id="erroTermo" class="erro"></div><br>
 
             <button type="submit">Enviar</button>
