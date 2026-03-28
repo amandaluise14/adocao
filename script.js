@@ -79,7 +79,7 @@ form.addEventListener('submit', function(e){
          valido = false;
     }
 
-    if(moradia === "apartamento" && permiteAnimais === ""){
+    if(moradia.value === "ap" && permiteAnimais === ""){
         alert("Informe se o apartamento permite animais!");
         valido = false;  
     }
@@ -90,12 +90,12 @@ form.addEventListener('submit', function(e){
          valido = false;
     }
 
-    if(moradia === "casa" && quintal === "sim" && quintalSeguro === ""){
+    if(moradia.value === "casa" && quintal === "sim" && quintalSeguro === ""){
         alert("Informe se o quintal é seguro!");
         valido = false;
     }
 
-    if(moradia === "apartamento" && quintal === "sim"){
+    if(moradia.value === "ap" && quintal === "sim"){
         alert("Apartamento não pode ter quintal!");
         valido = false;
     }
@@ -106,12 +106,12 @@ form.addEventListener('submit', function(e){
          valido = false;
     }
 
-    if(financeiro === "nao"){
+    if(financeiro.value === "nao"){
         alert("Sem condições financeiras para adoção.");
         valido = false;
     }
 
-    if(decisao === "hoje"){
+    if(decisao.value === "hoje"){
         alert("Decisão impulsiva! Pense bem antes de continuar.");
     }
 
