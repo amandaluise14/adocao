@@ -56,6 +56,7 @@ form.addEventListener('submit', function(e){
     if(cpfExistentes.includes(cpf)){
         alert("CPF já cadastrado!");
         valido = false;
+    }
 
     if (cidade === " "){
 
@@ -151,4 +152,4 @@ form.addEventListener('submit', function(e){
         form.reset();
         
     }
-})
+} )
