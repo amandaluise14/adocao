@@ -17,19 +17,15 @@ form.addEventListener('submit', function(e){
     let antes = document.getElementById('antes').value;
     let horas = document.getElementById('horas').value;
     let motivo = document.getElementById('motivo').value;
-    let termo = document.getElementById('termo').value;
+    let termo = document.getElementById('termo').checked;
 
     document.getElementById('erroNome').textContent ='';
     document.getElementById('erroEmail').textContent ='';
     document.getElementById('erroTelefone').textContent ='';
-    document.getElementById('erroCpf').textContent ='';
+    document.getElementById('erroCpf').textContent = '';
     document.getElementById('erroIdade').textContent ='';
     document.getElementById('erroCidade').textContent ='';
     document.getElementById('erroQuintal').textContent ='';
-    document.getElementById('erroAntes').textContent ='';
-    document.getElementById('erroHoras').textContent ='';
-    document.getElementById('erroTermo').textContent ='';
-
 
     if (nome.length < 3) {
 
@@ -43,17 +39,23 @@ form.addEventListener('submit', function(e){
         valido = false
     }
 
-    if (telefone.length < 8){
+    if (telefone.length < 10){
 
          document.getElementById('erroTelefone').textContent = "Telefone inválido";
          valido = false;
     }
 
-    if (cpf.trim() ===  ' '){
+    if (cpf ===  " "){
 
-         document.getElementById('erroCpf').textContent = "CPF inválido";
+         document.getElementById('erroCpf').textContent = "CPF é obrigatório";
          valido = false;
     }
+
+    let cpfExistentes = ["12345678900", "13239936909"];
+
+    if(cpfExistentes.includes(cpf)){
+        alert("CPF já cadastrado!");
+        valido = false;
 
     if (cidade === " "){
 
@@ -66,44 +68,72 @@ form.addEventListener('submit', function(e){
         valido = false;
     }
 
+    if(horas > 8){
+        alert("O animal ficará muito tempo sozinho! Justifique melhor.");
+    }
+
     if (moradia === " "){
 
          alert('Selecione uma moradia para continuar');
          valido = false;
     }
 
-    if (quintal.trim() ===  ' '){
+    if(moradia === "apartamento" && permiteAnimais === ""){
+        alert("Informe se o apartamento permite animais!");
+        valido = false;  
+    }
+
+    if (quintal ===  " "){
 
          document.getElementById('erroQuintal').textContent = "Selecione um para continuar";
          valido = false;
     }
 
-    if (antes.trim() ===  ' '){
+    if(moradia === "casa" && quintal === "sim" && quintalSeguro === ""){
+        alert("Informe se o quintal é seguro!");
+        valido = false;
+    }
+
+    if(moradia === "apartamento" && quintal === "sim"){
+        alert("Apartamento não pode ter quintal!");
+        valido = false;
+    }
+
+    if (antes ===  " "){
 
          document.getElementById('erroAntes').textContent = "Selecione um para continuar";
          valido = false;
     }
 
-    if (motivo.length < 10){
+    if(financeiro === "nao"){
+        alert("Sem condições financeiras para adoção.");
+        valido = false;
+    }
 
-         alert('O motivo precisa ter no minímo 10 caracteres');
+    if(decisao === "hoje"){
+        alert("Decisão impulsiva! Pense bem antes de continuar.");
+    }
+
+    if (motivo.length < 10 || motivo.includes === "quero" || motivo.includes === "porque sim" ){
+
+         alert('O motivo precisa ter no minímo 10 caracteres e não ser genérico');
          valido = false;
     }
 
     if (!termo){
 
-         document.getElementById('erroTermo').textContent = "Aceite os termos!";
+         alert("Aceite os termos!");
          valido = false;
     }
 
-     if (moradia.value === "ap"){
-            alert("O local permite animais?");
-                valido = false;
-            }
+     if (antes.value === "nao"){
+          alert("Você poderá ter acompanhamento da ONG");
+          valido = false;
+     }
 
     if (valido){
 
-        let resultado = document.getElementById('resultado')
+        let resultado = document.getElementById('resultado');
 
         resultado.innerHTML = `
 
@@ -121,5 +151,4 @@ form.addEventListener('submit', function(e){
         form.reset();
         
     }
-
 })

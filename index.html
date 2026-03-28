@@ -47,14 +47,44 @@
                 <input type="checkbox" id="quintal" placeholder="Não">Não
             <div id="erroQuintal" class="erro"></div><br>
 
+            <label for= "seguro">Quintal é seguro?</label>
+                <select id="quintalSeguro">
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select><br><br>
+
+            <label for= "permite">Apartamento permite animais?</label>
+                <select id="permiteAnimais">
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select><br><br>
+
             <label for="Antes">Já teve pet antes?:</label>
-                <input type="checkbox" id="antes" placeholder="Sim">Sim
-                <input type="checkbox" id="antes" placeholder="Não">Não
-            <div id="erroAntes" class="erro"></div><br>
+            <select id="antes">
+               <option value="">Selecione</option>
+               <option value="sim">Sim</option>
+               <option value="nao">Não</option>
+            </select><br><br>
 
             <label for="Horas">Quantas horas você consegue ficar com o seu pet?</label>
             <input type="time" id="horas" placeholder="Horas">
             <div id="erroHoras" class="erro"></div><br>
+
+            <label for="Financeiro">Condições financeiras:</label>
+                <select id="financeiro">
+                    <option value="">Selecione</option>
+                    <option value="sim">Tenho</option>
+                    <option value="nao">Não tenho</option>
+                </select><br><br>
+
+            <label for="Decisao">Quando decidiu adotar?</label>
+                <select id="decisao">
+                    <option value="">Selecione</option>
+                    <option value="hoje">Hoje</option>
+                    <option value="mais_tempo">Já faz um tempo</option>
+                </select><br><br>
 
             <label for="motivo">Motivo da adoção</label><br>
             <textarea id="motivo"></textarea><br><br>
