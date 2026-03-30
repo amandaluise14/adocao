@@ -1,7 +1,7 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ee2266;
-    color: #7c082f;
+    background-color: #fc93b6;
+    color: #fd4683;
 }
 
 .container {
@@ -52,7 +52,7 @@ button {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
-    background-color: #8d2d42;
+    background-color: #fd9eb2;
     color: white;
     border: none;
     cursor: pointer;
