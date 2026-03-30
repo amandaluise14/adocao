@@ -1,7 +1,7 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fc93b6;
-    color: #fd4683;
+    background-image: url(assets/images/patinhas.jfif) ;
+    color: #ffffff;
 }
 
 .container {
@@ -9,7 +9,8 @@ body {
     margin: 30px auto;
     background: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
+    background-color: #4d351f;;
 }
 
 h3 {
@@ -30,12 +31,14 @@ select{
     width: 100%;
     padding: 8px;
     margin-top: 5px; 
+    cursor: grab;
 }
 
 textarea{
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    cursor: text;
 }
 
 input[type="checkbox"] {
@@ -52,7 +55,7 @@ button {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
-    background-color: #fd9eb2;
+    background-color: #bba190;
     color: white;
     border: none;
     cursor: pointer;
@@ -60,4 +63,10 @@ button {
 .resultado {
     margin-top: 15px;
     font-size: 14px;
+}
+
+#pet {
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
 }
